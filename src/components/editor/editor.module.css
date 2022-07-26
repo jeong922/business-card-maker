@@ -12,3 +12,9 @@
   margin-bottom: 1em;
   color: makerGreen;
 }
+
+.button {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 0.8em;
+}
