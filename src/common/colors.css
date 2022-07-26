@@ -2,7 +2,10 @@
 
 @value makerBlack: black;
 @value makerWhite: white;
+@value makerDarkGrey: #5f5f5fe1;
 @value makerLightGrey: #e8e7e6;
+@value makerLightCard: rgba(255, 255, 255, 0.623);
+@value makerDarkCard: rgba(0, 0, 0, 0.8);
 @value makerLightPink: #ffeae8;
 @value makerGrey: #626262;
 @value makerGreen: #385461;
