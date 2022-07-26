@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../button/button';
 import ImageFileInput from '../image_file_input/image_file_input';
-import styles from './card_form.module.css';
+import styles from './card_edit_form.module.css';
 
-const CardForm = ({ card }) => {
+const CardEditForm = ({ card }) => {
   const { name, theme, company, title, email, message, fileName, fileURL } =
     card;
   const onSubmit = () => {};
@@ -37,4 +37,4 @@ const CardForm = ({ card }) => {
   );
 };
 
-export default CardForm;
+export default CardEditForm;
