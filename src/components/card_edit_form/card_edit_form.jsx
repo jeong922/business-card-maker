@@ -36,6 +36,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         name="name"
         value={name}
         onChange={onChange}
+        placeholder="Name"
       />
       <input
         className={styles.input}
@@ -43,12 +44,14 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         name="company"
         value={company}
         onChange={onChange}
+        placeholder="Company"
       />
       <select
         className={styles.select}
         name="theme"
         value={theme}
         onChange={onChange}
+        placeholder="Theme"
       >
         <option value="light">Light</option>
         <option value="dark">Dark</option>
@@ -60,6 +63,7 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         name="title"
         value={title}
         onChange={onChange}
+        placeholder="Title"
       />
       <input
         className={styles.input}
@@ -67,12 +71,14 @@ const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
         name="email"
         value={email}
         onChange={onChange}
+        placeholder="Email"
       />
       <textarea
         className={styles.textarea}
         name="message"
         value={message}
         onChange={onChange}
+        placeholder="Message"
       ></textarea>
       <div className={styles.fileInput}>
         <FileInput name={fileName} onFileChange={onFileChange} />
