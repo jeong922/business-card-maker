@@ -4,7 +4,7 @@ import CardAddForm from '../card_add_form/card_add_form';
 import CardEditForm from '../card_edit_form/card_edit_form';
 import styles from './editor.module.css';
 
-const Editor = ({ cards, addCard, updateCard, deleteCard }) => {
+const Editor = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
   const [newCard, setNewCard] = useState(false);
 
   const onClick = () => {
@@ -32,12 +32,19 @@ const Editor = ({ cards, addCard, updateCard, deleteCard }) => {
       {Object.keys(cards).map((key) => (
         <CardEditForm
           key={key}
+          FileInput={FileInput}
           card={cards[key]}
           updateCard={updateCard}
           deleteCard={deleteCard}
         />
       ))}
-      {newCard && <CardAddForm onAdd={addCard} setNewCard={setNewCard} />}
+      {newCard && (
+        <CardAddForm
+          FileInput={FileInput}
+          onAdd={addCard}
+          setNewCard={setNewCard}
+        />
+      )}
     </section>
   );
 };
