@@ -5,6 +5,17 @@
   border-right: 1px solid makerLightGrey;
   padding: 0.5em 2em;
   overflow-y: auto;
+  scrollbar-width: 6px;
+  scrollbar-color: makerLightGrey transparent;
+}
+
+.editor::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+
+.editor::-webkit-scrollbar-thumb {
+  background-color: makerLightGrey;
 }
 
 .title {

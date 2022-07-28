@@ -1,9 +1,9 @@
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './card_add_form.module.css';
 import { v4 as uuidv4 } from 'uuid';
 
-const CardAddForm = ({ FileInput, onAdd, setNewCard }) => {
+const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -104,6 +104,6 @@ const CardAddForm = ({ FileInput, onAdd, setNewCard }) => {
       </div>
     </div>
   );
-};
+});
 
 export default CardAddForm;
