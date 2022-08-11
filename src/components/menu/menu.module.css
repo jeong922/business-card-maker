@@ -1,0 +1,57 @@
+@value makerLightGrey, makerBlack, makerWhite  from '../../common/colors.css';
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 245px;
+  height: 100%;
+  z-index: 99;
+  border-right: 1px solid makerLightGrey;
+}
+
+.title {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid makerLightGrey;
+}
+
+.logo {
+  width: 60px;
+}
+
+.ul {
+  padding: 20px 0;
+}
+
+.li {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.li:hover {
+  background-color: makerLightGrey;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.logout {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: makerBlack;
+  color: makerWhite;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: makerBlack;
+  background-color: makerLightGrey;
+}

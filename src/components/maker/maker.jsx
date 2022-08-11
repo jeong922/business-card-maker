@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Footer from '../footer/footer';
-import Header from '../header/header';
 import styles from './maker.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Editor from '../editor/editor';
 import Preview from '../preview/preview';
+import Menu from '../menu/menu';
+import PageTitle from '../page_title/page_title';
 
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const location = useLocation();
@@ -56,20 +57,23 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   };
 
   return (
-    <section className={styles.maker}>
-      <Header onLogout={onLogout} />
-      <div className={styles.container}>
-        <Editor
-          FileInput={FileInput}
-          cards={cards}
-          addCard={createOrUpdateCard}
-          updateCard={createOrUpdateCard}
-          deleteCard={deleteCard}
-        />
-        <Preview cards={cards} />
-      </div>
-      <Footer />
-    </section>
+    <>
+      <Menu onLogout={onLogout} />
+      <section className={styles.maker}>
+        <PageTitle title="Card" />
+        <div className={styles.container}>
+          <Editor
+            FileInput={FileInput}
+            cards={cards}
+            addCard={createOrUpdateCard}
+            updateCard={createOrUpdateCard}
+            deleteCard={deleteCard}
+          />
+          <Preview cards={cards} />
+        </div>
+        <Footer />
+      </section>
+    </>
   );
 };
 

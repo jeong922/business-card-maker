@@ -1,27 +1,16 @@
-@value mediaQuery from '../../common/size.css';
 @value makerWhite, makerLightGrey, makerBlack, makerDarkGrey from '../../common/colors.css';
 
-.maker {
+.todo {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: antiquewhite;
   padding-left: 245px;
-}
-
-.title {
-  width: 100%;
-  padding: 2rem;
 }
 
 .container {
   display: flex;
   flex: 1;
   min-height: 0;
-}
-
-@media screen and (max-width: mediaQuery) {
-  .container {
-    flex-direction: column;
-  }
 }
