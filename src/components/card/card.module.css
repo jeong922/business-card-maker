@@ -50,6 +50,9 @@
 .edit {
   margin-left: 10px;
   cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  border: none;
 }
 
 .edit:hover {

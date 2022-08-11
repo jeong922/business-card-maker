@@ -62,14 +62,13 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       <section className={styles.maker}>
         <PageTitle title="Card" />
         <div className={styles.container}>
-          <Editor
+          <Preview
             FileInput={FileInput}
             cards={cards}
             addCard={createOrUpdateCard}
             updateCard={createOrUpdateCard}
             deleteCard={deleteCard}
           />
-          <Preview cards={cards} />
         </div>
         <Footer />
       </section>

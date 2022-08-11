@@ -2,12 +2,13 @@ import React, { memo } from 'react';
 import styles from './card.module.css';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
-const Card = memo(({ card, setEditCard }) => {
+const Card = memo(({ card, setEditCard, setId }) => {
   const { name, theme, company, title, email, message, fileURL } = card;
   const url = fileURL || DEFAULT_IMAGE;
 
   const onClick = () => {
     setEditCard(true);
+    setId(card.id);
   };
 
   return (
@@ -16,7 +17,9 @@ const Card = memo(({ card, setEditCard }) => {
       <div className={styles.info}>
         <div className={styles.wrapper}>
           <h1 className={styles.name}>{name}</h1>
-          <i className={`${'fas fa-pen'} ${styles.edit}`} onClick={onClick}></i>
+          <button className={styles.edit} onClick={onClick}>
+            <i className="fas fa-pen"></i>
+          </button>
         </div>
         <span className={styles.company}>{company}</span>
         <span className={styles.title}>{title}</span>

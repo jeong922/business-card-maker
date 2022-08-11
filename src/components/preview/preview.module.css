@@ -17,6 +17,12 @@
   background-color: makerLightGrey;
 }
 
+.button {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 0.8em;
+}
+
 .title {
   width: 100%;
   text-align: center;
