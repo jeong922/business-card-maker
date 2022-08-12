@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 import styles from './card.module.css';
 
 const DEFAULT_IMAGE = '/images/default_logo.png';
-const Card = memo(({ card, setEditCard, setId }) => {
+const Card = memo(({ card, setEditCard, setId, deleteCard }) => {
   const { name, theme, company, title, email, message, fileURL } = card;
   const url = fileURL || DEFAULT_IMAGE;
 
@@ -11,8 +11,15 @@ const Card = memo(({ card, setEditCard, setId }) => {
     setId(card.id);
   };
 
+  const onSubmit = () => {
+    deleteCard(card);
+  };
+
   return (
     <li className={`${styles.card} ${getStyles(theme)}`}>
+      <button className={styles.delete} onClick={onSubmit}>
+        <i className="fas fa-times"></i>
+      </button>
       <img className={styles.avatar} src={url} alt="profile" />
       <div className={styles.info}>
         <div className={styles.wrapper}>

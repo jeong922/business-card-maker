@@ -48,6 +48,7 @@
   background-color: makerBlack;
   color: makerWhite;
   padding: 5px 10px;
+  border: none;
   cursor: pointer;
 }
 

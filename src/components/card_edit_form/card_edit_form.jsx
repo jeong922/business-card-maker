@@ -1,14 +1,7 @@
 import React from 'react';
-import Button from '../button/button';
 import styles from './card_edit_form.module.css';
 
-const CardEditForm = ({
-  FileInput,
-  card,
-  updateCard,
-  deleteCard,
-  setEditCard,
-}) => {
+const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
   const { name, theme, company, title, email, message, fileName } = card;
   const onFileChange = (file) => {
     updateCard({
@@ -27,9 +20,6 @@ const CardEditForm = ({
       ...card,
       [e.currentTarget.name]: e.currentTarget.value,
     });
-  };
-  const onSubmit = () => {
-    deleteCard(card);
   };
 
   const onClose = (e) => {
@@ -95,7 +85,6 @@ const CardEditForm = ({
           <div className={styles.fileInput}>
             <FileInput name={fileName} onFileChange={onFileChange} />
           </div>
-          <Button name="Delete" onClick={onSubmit} />
         </form>
       </div>
     </div>

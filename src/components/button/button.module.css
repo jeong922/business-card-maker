@@ -1,7 +1,7 @@
-@value makerWhite, makerGreen from '../../common/colors.css';
+@value makerBlack, makerWhite, makerLightGrey from '../../common/colors.css';
 
 .button {
-  background-color: makerGreen;
+  background-color: makerBlack;
   color: makerWhite;
   font-weight: bold;
   font-size: 0.8rem;
@@ -12,5 +12,6 @@
 }
 
 .button:hover {
-  opacity: 0.8;
+  color: makerBlack;
+  background-color: makerLightGrey;
 }

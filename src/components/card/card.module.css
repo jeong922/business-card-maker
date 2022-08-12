@@ -1,7 +1,9 @@
+@value mediaQuery from '../../common/size.css';
 @value makerShadow, makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard from '../../common/colors.css';
 
 .card {
-  width: 100%;
+  position: relative;
+  width: 50%;
   display: flex;
   max-width: 35rem;
   align-items: center;
@@ -47,6 +49,20 @@
   flex-direction: column;
 }
 
+.delete {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+}
+
+.delete:hover {
+  opacity: 0.7;
+}
+
 .edit {
   margin-left: 10px;
   cursor: pointer;
@@ -84,4 +100,10 @@
   height: 2px;
   background-color: makerDarkGrey;
   transform: translateY(0.5em);
+}
+
+@media screen and (max-width: mediaQuery) {
+  .card {
+    width: 100%;
+  }
 }

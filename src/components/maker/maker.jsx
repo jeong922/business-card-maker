@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Footer from '../footer/footer';
 import styles from './maker.module.css';
 import { useLocation, useNavigate } from 'react-router-dom';
-import Editor from '../editor/editor';
 import Preview from '../preview/preview';
 import Menu from '../menu/menu';
 import PageTitle from '../page_title/page_title';

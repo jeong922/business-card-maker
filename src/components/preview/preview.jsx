@@ -10,7 +10,6 @@ const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
   const [editCard, setEditCard] = useState(false);
   const [id, setId] = useState('');
 
-  console.log(editCard);
   useEffect(() => {
     if (newCard) {
       document.body.style.cssText = `
@@ -39,6 +38,7 @@ const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
             card={cards[key]}
             setId={setId}
             setEditCard={setEditCard}
+            deleteCard={deleteCard}
           />
         ))}
       </ul>
@@ -56,7 +56,6 @@ const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
           FileInput={FileInput}
           card={cards[id]}
           updateCard={updateCard}
-          deleteCard={deleteCard}
           setEditCard={setEditCard}
         />
       )}
