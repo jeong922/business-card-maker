@@ -8,10 +8,8 @@
   padding: 0.5em;
   flex: 1 1 50%;
   cursor: pointer;
-  border: none;
 }
 
 .button:hover {
-  color: makerBlack;
-  background-color: makerLightGrey;
+  opacity: 0.8;
 }

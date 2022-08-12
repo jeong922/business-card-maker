@@ -1,4 +1,4 @@
-@value makerGreen, makerLightGrey from '../../common/colors.css';
+@value makerBlack, makerWhite, makerLightGrey from '../../common/colors.css';
 @value mediaQuery from '../../common/size.css';
 
 .preview {
@@ -22,6 +22,19 @@
   width: 100%;
   text-align: end;
   margin-bottom: 0.8em;
+}
+
+.newCardBtn {
+  background-color: makerBlack;
+  color: makerWhite;
+  padding: 0.8em 1.2em;
+  border: none;
+  cursor: pointer;
+}
+
+.newCardBtn:hover {
+  color: makerBlack;
+  background-color: makerLightGrey;
 }
 
 .title {

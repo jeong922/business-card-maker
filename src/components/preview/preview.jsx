@@ -29,7 +29,9 @@ const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
   return (
     <section className={styles.preview}>
       <div className={styles.button}>
-        <Button name="New Card" onClick={onClick} />
+        <button className={styles.newCardBtn} onClick={onClick}>
+          New Card
+        </button>
       </div>
       <ul className={styles.cards}>
         {Object.keys(cards).map((key) => (
