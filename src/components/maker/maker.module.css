@@ -9,9 +9,24 @@
   padding-left: 245px;
 }
 
+.top {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .title {
   width: 100%;
   padding: 2rem;
+}
+
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 .container {
@@ -23,5 +38,9 @@
 @media screen and (max-width: mediaQuery) {
   .container {
     flex-direction: column;
+  }
+
+  .maker {
+    padding-left: 0;
   }
 }

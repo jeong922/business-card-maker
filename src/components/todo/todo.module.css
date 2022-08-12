@@ -1,3 +1,4 @@
+@value mediaQuery from '../../common/size.css';
 @value makerWhite, makerLightGrey, makerBlack, makerDarkGrey from '../../common/colors.css';
 
 .todo {
@@ -5,12 +6,39 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: antiquewhite;
   padding-left: 245px;
 }
 
 .container {
-  display: flex;
+  padding: 0.5em 2em;
+  overflow-y: auto;
+  scrollbar-width: 6px;
+  scrollbar-color: makerLightGrey transparent;
   flex: 1;
   min-height: 0;
+}
+
+.top {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .container {
+    flex-direction: column;
+  }
+
+  .todo {
+    padding-left: 0;
+  }
 }

@@ -9,10 +9,12 @@ import PageTitle from '../page_title/page_title';
 const Maker = ({ FileInput, authService, cardRepository }) => {
   const location = useLocation();
   const locationState = location?.state;
+  const pathName = location.pathname;
   const navigate = useNavigate();
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(locationState && locationState.id);
-
+  const [menuBtn, setMenuBtn] = useState(false);
+  const [show, setShow] = useState(false);
   const onLogout = useCallback(() => {
     authService.logout();
   }, [authService]);
@@ -55,11 +57,39 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     cardRepository.removeCard(userId, card);
   };
 
+  const handleResize = () => {
+    window.innerWidth > 992 ? setMenuBtn(false) : setMenuBtn(true);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const onClick = () => {
+    setShow(true);
+  };
+
   return (
     <>
-      <Menu onLogout={onLogout} />
+      <Menu
+        onLogout={onLogout}
+        show={show}
+        setShow={setShow}
+        pathName={pathName}
+      />
       <section className={styles.maker}>
-        <PageTitle title="Card" />
+        <div className={styles.top}>
+          <PageTitle title="Card" />
+          {menuBtn && (
+            <button className={styles.menuBtn} onClick={onClick}>
+              <i className="fas fa-bars"></i>
+            </button>
+          )}
+        </div>
         <div className={styles.container}>
           <Preview
             FileInput={FileInput}

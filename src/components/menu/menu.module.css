@@ -1,3 +1,4 @@
+@value mediaQuery from '../../common/size.css';
 @value makerLightGrey, makerBlack, makerWhite  from '../../common/colors.css';
 
 .nav {
@@ -8,19 +9,49 @@
   width: 245px;
   height: 100%;
   z-index: 99;
+  background-color: makerWhite;
   border-right: 1px solid makerLightGrey;
+}
+
+.nav.show {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.nav.none {
+  /* width: 245px;
+  transform: translateX(-245px); */
+}
+
+.logWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  border-bottom: 1px solid makerLightGrey;
 }
 
 .title {
   margin: 0 10px;
-  padding: 10px 20px;
   font-size: 1.5rem;
   text-align: center;
-  border-bottom: 1px solid makerLightGrey;
 }
 
 .logo {
   width: 60px;
+}
+
+.closeBtn {
+  display: none;
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  opacity: 0.8;
 }
 
 .ul {
@@ -55,4 +86,14 @@
 .logout:hover {
   color: makerBlack;
   background-color: makerLightGrey;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .nav {
+    transform: translateX(-245px);
+  }
+
+  .closeBtn {
+    display: block;
+  }
 }
