@@ -6,6 +6,7 @@ import Footer from '../footer/footer';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Todo from '../todo/todo';
 import TodoAddForm from '../todo_add_form/todo_add_form';
+import TodoEditForm from '../todo_edit_form/todo_edit_form';
 
 const Todos = ({ authService, todoRepository }) => {
   const location = useLocation();
@@ -121,6 +122,13 @@ const Todos = ({ authService, todoRepository }) => {
         </div>
         {newTodo && (
           <TodoAddForm setNewTodo={setNewTodo} addTodo={createOrUpdateTodo} />
+        )}
+        {editTodo && (
+          <TodoEditForm
+            todo={todos[id]}
+            updateTodo={createOrUpdateTodo}
+            setEditTodo={setEditTodo}
+          />
         )}
 
         <Footer />

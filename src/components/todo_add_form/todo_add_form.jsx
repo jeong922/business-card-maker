@@ -43,14 +43,12 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
           </div>
           <div className={styles.inputWrapper}>
             <span className={styles.span}>TODO</span>
-            <input
+            <textarea
               ref={textRef}
               className={`${styles.input} ${styles.todo}`}
-              type="text"
               placeholder="todo"
             />
           </div>
-
           <Button name="Add" onClick={onSubmit} />
         </form>
       </div>
