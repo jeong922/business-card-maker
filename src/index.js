@@ -8,11 +8,13 @@ import ImageFileInput from './components/image_file_input/image_file_input';
 import CardRepository from './service/card_repository';
 import { firebaseApp } from './service/firebase';
 import '@fortawesome/fontawesome-free/js/all.js';
+import TodoRepository from './service/todo_repository';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const authService = new AuthService(firebaseApp);
 const imageUploader = new ImageUploader();
 const cardRepository = new CardRepository(firebaseApp);
+const todoRepository = new TodoRepository(firebaseApp);
 const FileInput = memo((props) => (
   <ImageFileInput {...props} imageUploader={imageUploader} />
 ));
@@ -23,6 +25,7 @@ root.render(
       authService={authService}
       FileInput={FileInput}
       cardRepository={cardRepository}
+      todoRepository={todoRepository}
     />
   </React.StrictMode>
 );

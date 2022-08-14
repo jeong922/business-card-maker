@@ -1,44 +1,64 @@
-@value mediaQuery from '../../common/size.css';
-@value makerWhite, makerLightGrey, makerBlack, makerDarkGrey from '../../common/colors.css';
+@value makerShadow, makerLightGrey , makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
 
 .todo {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  height: 10rem;
   display: flex;
-  flex-direction: column;
-  padding-left: 245px;
+  max-width: 35rem;
+  align-items: center;
+  margin: 1em;
+  padding: 1.5em;
+  border-radius: 1em;
+  box-shadow: 6px 6px 8px 0px makerShadow;
+  background-color: rgba(199, 199, 199, 0.192);
+}
+
+.delete {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1em;
+  border: none;
+}
+
+.edit {
+  position: absolute;
+  right: 40px;
+  top: 12px;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  font-size: 1em;
+  border: none;
+}
+
+.delete:hover {
+  opacity: 0.7;
 }
 
 .container {
-  padding: 0.5em 2em;
-  overflow-y: auto;
-  scrollbar-width: 6px;
-  scrollbar-color: makerLightGrey transparent;
-  flex: 1;
-  min-height: 0;
-}
-
-.top {
-  width: 100%;
-  padding: 2rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
 }
 
-.menuBtn {
-  background-color: transparent;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
+.text {
+  width: 100%;
+  height: 100%;
+  max-height: 5rem;
+  padding: 0.5em 0;
+  overflow-y: auto;
 }
 
-@media screen and (max-width: mediaQuery) {
-  .container {
-    flex-direction: column;
-  }
+.schedule {
+  position: absolute;
+  bottom: 12px;
+  color: makerDarkGrey;
+}
 
-  .todo {
-    padding-left: 0;
-  }
+.date {
+  margin-left: 0.3em;
 }

@@ -2,6 +2,7 @@
 
 @value makerBlack: black;
 @value makerWhite: white;
+@value makerOverlay: rgba(0, 0, 0, 0.7);
 @value makerDarkGrey: #5f5f5fe1;
 @value makerLightGrey: #e8e7e6;
 @value makerLightCard: rgba(255, 255, 255, 0.623);

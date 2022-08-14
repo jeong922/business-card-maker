@@ -11,6 +11,7 @@
   z-index: 99;
   background-color: makerWhite;
   border-right: 1px solid makerLightGrey;
+  transition: transform 200ms ease-in-out;
 }
 
 .nav.show {

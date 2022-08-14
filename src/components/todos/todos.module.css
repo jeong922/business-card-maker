@@ -1,22 +1,22 @@
-@value makerBlack, makerWhite, makerLightGrey, makerDarkGrey from '../../common/colors.css';
 @value mediaQuery from '../../common/size.css';
+@value makerWhite, makerLightGrey, makerBlack, makerDarkGrey from '../../common/colors.css';
 
-.preview {
-  /* flex-basis: 50%; */
+.todo {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 245px;
+}
+
+.container {
   padding: 0.5em 2em;
   overflow-y: auto;
   scrollbar-width: 6px;
   scrollbar-color: makerLightGrey transparent;
+  flex: 1;
+  min-height: 0;
   padding-bottom: 3rem;
-}
-
-.preview::-webkit-scrollbar {
-  background-color: transparent;
-  width: 6px;
-}
-
-.preview::-webkit-scrollbar-thumb {
-  background-color: makerLightGrey;
 }
 
 .button {
@@ -25,10 +25,8 @@
   margin-bottom: 0.8em;
 }
 
-.newCardBtn {
-  /* background-color: makerBlack; */
+.newTodoBtn {
   color: makerDarkGrey;
-  /* padding: 0.8em 1.2em; */
   font-size: 1.5em;
   margin-right: 1.2em;
   background-color: transparent;
@@ -36,19 +34,26 @@
   cursor: pointer;
 }
 
-.newCardBtn:hover {
+.newTodoBtn:hover {
   color: makerBlack;
-  /* background-color: makerLightGrey; */
 }
 
-.title {
+.top {
   width: 100%;
-  text-align: center;
-  margin-bottom: 1em;
-  color: makerGreen;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.cards {
+.menuBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.todos {
   width: 100%;
   padding: 0.5em 2em;
   display: flex;
@@ -59,7 +64,11 @@
 }
 
 @media screen and (max-width: mediaQuery) {
-  .cards {
+  .container {
     flex-direction: column;
+  }
+
+  .todo {
+    padding-left: 0;
   }
 }

@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import Login from './components/login/login';
 import Maker from './components/maker/maker';
-import Todo from './components/todo/todo';
+import Todos from './components/todos/todos';
 
-function App({ FileInput, authService, cardRepository }) {
+function App({ FileInput, authService, cardRepository, todoRepository }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
@@ -22,7 +22,12 @@ function App({ FileInput, authService, cardRepository }) {
           ></Route>
           <Route
             path="/todo"
-            element={<Todo authService={authService} />}
+            element={
+              <Todos
+                authService={authService}
+                todoRepository={todoRepository}
+              />
+            }
           ></Route>
         </Routes>
       </BrowserRouter>

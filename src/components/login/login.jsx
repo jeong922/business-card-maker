@@ -26,7 +26,6 @@ const Login = ({ authService }) => {
 
   return (
     <section className={styles.login}>
-      <Header />
       <section className={styles.container}>
         <span className={styles.title}>SNS계정으로 간편한 로그인</span>
         <ul className={styles.list}>
@@ -77,7 +76,6 @@ const Login = ({ authService }) => {
           </li>
         </ul>
       </section>
-      <Footer />
     </section>
   );
 };
