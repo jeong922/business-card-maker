@@ -1,0 +1,21 @@
+@value makerLightGrey, makerDarkGrey, makerBlack, makerWhite from '../../common/colors.css';
+
+.button {
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  width: 3rem;
+  height: 3rem;
+  background-color: makerBlack;
+  color: makerWhite;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.3rem;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.button:hover {
+  background-color: makerDarkGrey;
+}

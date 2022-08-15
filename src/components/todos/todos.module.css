@@ -7,16 +7,16 @@
   display: flex;
   flex-direction: column;
   padding-left: 245px;
-}
-
-.container {
-  padding: 0.5em 2em;
-  overflow-y: auto;
   scrollbar-width: 6px;
   scrollbar-color: makerLightGrey transparent;
   flex: 1;
   min-height: 0;
-  padding-bottom: 3rem;
+}
+
+.container {
+  padding: 0.5em 2em;
+  scrollbar-width: 6px;
+  scrollbar-color: makerLightGrey transparent;
 }
 
 .button {
@@ -39,11 +39,16 @@
 }
 
 .top {
+  position: fixed;
+  top: 0;
   width: 100%;
+  height: 6em;
   padding: 2rem;
   display: flex;
+  background-color: makerWhite;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .menuBtn {
@@ -61,6 +66,8 @@
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  padding-top: 6em;
+  padding-bottom: 3em;
 }
 
 @media screen and (max-width: mediaQuery) {

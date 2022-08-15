@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Todo from '../todo/todo';
 import TodoAddForm from '../todo_add_form/todo_add_form';
 import TodoEditForm from '../todo_edit_form/todo_edit_form';
+import AddButton from '../add_button/add_button';
 
 const Todos = ({ authService, todoRepository }) => {
   const location = useLocation();
@@ -103,11 +104,7 @@ const Todos = ({ authService, todoRepository }) => {
           )}
         </div>
         <div className={styles.container}>
-          <div className={styles.button}>
-            <button className={styles.newTodoBtn} onClick={makeTodo}>
-              <i className="fas fa-plus"></i>
-            </button>
-          </div>
+          <AddButton onClick={makeTodo} />
           <ul className={styles.todos}>
             {Object.keys(todos).map((key) => (
               <Todo
@@ -119,18 +116,17 @@ const Todos = ({ authService, todoRepository }) => {
               />
             ))}
           </ul>
+          {newTodo && (
+            <TodoAddForm setNewTodo={setNewTodo} addTodo={createOrUpdateTodo} />
+          )}
+          {editTodo && (
+            <TodoEditForm
+              todo={todos[id]}
+              updateTodo={createOrUpdateTodo}
+              setEditTodo={setEditTodo}
+            />
+          )}
         </div>
-        {newTodo && (
-          <TodoAddForm setNewTodo={setNewTodo} addTodo={createOrUpdateTodo} />
-        )}
-        {editTodo && (
-          <TodoEditForm
-            todo={todos[id]}
-            updateTodo={createOrUpdateTodo}
-            setEditTodo={setEditTodo}
-          />
-        )}
-
         <Footer />
       </section>
     </>

@@ -16,7 +16,7 @@ const Todo = memo(({ todo, setId, setEditTodo, deleteTodo }) => {
   };
 
   return (
-    <div className={styles.todo}>
+    <li className={styles.todo}>
       <button className={styles.edit} onClick={onClick}>
         <i className="fas fa-pen"></i>
       </button>
@@ -34,7 +34,7 @@ const Todo = memo(({ todo, setId, setEditTodo, deleteTodo }) => {
           </div>
         )}
       </div>
-    </div>
+    </li>
   );
 });
 

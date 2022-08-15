@@ -19,28 +19,6 @@
   background-color: makerLightGrey;
 }
 
-.button {
-  width: 100%;
-  text-align: end;
-  margin-bottom: 0.8em;
-}
-
-.newCardBtn {
-  /* background-color: makerBlack; */
-  color: makerDarkGrey;
-  /* padding: 0.8em 1.2em; */
-  font-size: 1.5em;
-  margin-right: 1.2em;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.newCardBtn:hover {
-  color: makerBlack;
-  /* background-color: makerLightGrey; */
-}
-
 .title {
   width: 100%;
   text-align: center;
