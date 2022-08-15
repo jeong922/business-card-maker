@@ -22,8 +22,6 @@ const Todos = ({ authService, todoRepository }) => {
   const [newTodo, setNewTodo] = useState(false);
   const [editTodo, setEditTodo] = useState(false);
 
-  console.log('todos', todos);
-
   const onLogout = useCallback(() => {
     authService.logout();
   }, [authService]);
@@ -32,9 +30,13 @@ const Todos = ({ authService, todoRepository }) => {
     if (!userId) {
       return;
     }
-    const stopSync = todoRepository.syncTodo(userId, (todos) => {
-      setTodos(todos);
-    });
+    const stopSync = todoRepository.syncItems(
+      userId,
+      (todos) => {
+        setTodos(todos);
+      },
+      'todos'
+    );
     return () => stopSync();
   }, [userId, todoRepository]);
 
@@ -54,7 +56,7 @@ const Todos = ({ authService, todoRepository }) => {
       updated[todo.id] = todo;
       return updated;
     });
-    todoRepository.saveTodo(userId, todo);
+    todoRepository.saveItem(userId, todo, 'todos');
   };
 
   const deleteTodo = (todo) => {
@@ -63,7 +65,7 @@ const Todos = ({ authService, todoRepository }) => {
       delete updated[todo.id];
       return updated;
     });
-    todoRepository.removeTodo(userId, todo);
+    todoRepository.removeItem(userId, todo, 'todos');
   };
 
   const handleResize = () => {

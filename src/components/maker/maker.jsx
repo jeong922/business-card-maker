@@ -23,9 +23,13 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
     if (!userId) {
       return;
     }
-    const stopSync = cardRepository.syncCards(userId, (cards) => {
-      setCards(cards);
-    });
+    const stopSync = cardRepository.syncItems(
+      userId,
+      (cards) => {
+        setCards(cards);
+      },
+      'cards'
+    );
     return () => stopSync();
   }, [userId, cardRepository]);
 
@@ -45,7 +49,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       updated[card.id] = card;
       return updated;
     });
-    cardRepository.saveCard(userId, card);
+    cardRepository.saveItem(userId, card, 'cards');
   };
 
   const deleteCard = (card) => {
@@ -54,7 +58,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.removeCard(userId, card);
+    cardRepository.removeItem(userId, card, 'cards');
   };
 
   const handleResize = () => {

@@ -4,8 +4,6 @@ import styles from './todo.module.css';
 const Todo = memo(({ todo, setId, setEditTodo, deleteTodo }) => {
   const { text, start, end } = todo;
 
-  console.log('Todo', todo);
-
   const onClick = () => {
     setEditTodo(true);
     setId(todo.id);
