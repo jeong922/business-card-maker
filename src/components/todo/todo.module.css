@@ -1,16 +1,31 @@
+@value mediaQuery from '../../common/size.css';
 @value makerShadow, makerLightGrey , makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
 
-.todo {
+/* .todo {
   position: relative;
-  width: 100%;
+  width: 50%;
   height: 10rem;
   display: flex;
-  max-width: 35rem;
   align-items: center;
   margin: 1em;
   padding: 1.5em;
   border-radius: 1em;
   box-shadow: 6px 6px 8px 0px makerShadow;
+  background-color: rgba(199, 199, 199, 0.192);
+} */
+
+.todo {
+  position: relative;
+  width: 100%;
+  display: flex;
+  max-width: 35rem;
+  align-items: center;
+  margin: 0.5em;
+  padding: 1.5em;
+  border-radius: 1em;
+  box-shadow: 6px 6px 8px 0px makerShadow;
+  height: 10rem;
+  align-items: center;
   background-color: rgba(199, 199, 199, 0.192);
 }
 
@@ -61,4 +76,10 @@
 
 .date {
   margin-left: 0.3em;
+}
+
+@media screen and (max-width: mediaQuery) {
+  .todo {
+    width: 100%;
+  }
 }

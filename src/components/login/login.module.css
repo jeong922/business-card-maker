@@ -1,4 +1,4 @@
-@value makerGreen, makerLightPink, makerWhite from '../../common/colors.css';
+@value makerDarkGrey, makerLightGrey, makerWhite from '../../common/colors.css';
 
 .login {
   width: 30em;
@@ -39,13 +39,13 @@
   font-size: 1.2rem;
   border-radius: 1.2rem;
   background-color: transparent;
-  border: 0.2rem solid makerGreen;
+  border: 0.2rem solid makerDarkGrey;
   outline: none;
   cursor: pointer;
 }
 
 .button:hover {
-  background-color: makerLightPink;
+  background-color: makerLightGrey;
 }
 
 .svg {

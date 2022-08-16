@@ -98,7 +98,7 @@ const Todos = ({ authService, todoRepository }) => {
       />
       <section className={styles.todo}>
         <div className={styles.top}>
-          <PageTitle title="Todo" />
+          <PageTitle title="MEMO" />
           {menuBtn && (
             <button className={styles.menuBtn} onClick={onClick}>
               <i className="fas fa-bars"></i>

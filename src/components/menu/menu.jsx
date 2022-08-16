@@ -41,17 +41,17 @@ const Menu = ({ onLogout, show, setShow, pathName }) => {
               ) : (
                 <i className={`${'far fa-address-card'} ${styles.icon}`}></i>
               )}
-              Card
+              CARD
             </li>
           </Link>
-          <Link to="/todo">
+          <Link to="/memo">
             <li className={styles.li} onClick={onClick}>
-              {pathName === '/todo' ? (
+              {pathName === '/memo' ? (
                 <i className={`${'fas fa-list-alt'} ${styles.icon}`}></i>
               ) : (
                 <i className={`${'far fa-list-alt'} ${styles.icon}`}></i>
               )}
-              ToDo
+              MEMO
             </li>
           </Link>
         </ul>

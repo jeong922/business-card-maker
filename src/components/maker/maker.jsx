@@ -78,7 +78,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   };
 
   return (
-    <>
+    <div className={styles.wrapper}>
       <Menu
         onLogout={onLogout}
         show={show}
@@ -87,7 +87,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       />
       <section className={styles.maker}>
         <div className={styles.top}>
-          <PageTitle title="Card" />
+          <PageTitle title="CARD" />
           {menuBtn && (
             <button className={styles.menuBtn} onClick={onClick}>
               <i className="fas fa-bars"></i>
@@ -105,7 +105,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         </div>
         <Footer />
       </section>
-    </>
+    </div>
   );
 };
 

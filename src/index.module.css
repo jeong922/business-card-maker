@@ -1,4 +1,4 @@
-@value makerWhite from './common/colors.css';
+@value makerWhite, makerLightGrey from './common/colors.css';
 
 body {
   margin: 0;
@@ -8,6 +8,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: makerWhite;
+  scrollbar-width: 6px;
+  scrollbar-color: makerLightGrey transparent;
+}
+
+body::-webkit-scrollbar {
+  background-color: transparent;
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: makerLightGrey;
 }
 
 code {

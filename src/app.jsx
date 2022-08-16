@@ -21,7 +21,7 @@ function App({ FileInput, authService, cardRepository, todoRepository }) {
             }
           ></Route>
           <Route
-            path="/todo"
+            path="/memo"
             element={
               <Todos
                 authService={authService}

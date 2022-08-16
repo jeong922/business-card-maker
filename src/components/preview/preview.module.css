@@ -4,19 +4,8 @@
 .preview {
   /* flex-basis: 50%; */
   padding: 0.5em 2em;
-  overflow-y: auto;
-  scrollbar-width: 6px;
-  scrollbar-color: makerLightGrey transparent;
-  padding-bottom: 3rem;
-}
-
-.preview::-webkit-scrollbar {
-  background-color: transparent;
-  width: 6px;
-}
-
-.preview::-webkit-scrollbar-thumb {
-  background-color: makerLightGrey;
+  padding-bottom: 4rem;
+  margin: 0 auto;
 }
 
 .title {
@@ -26,20 +15,28 @@
   color: makerGreen;
 }
 
-.cards {
+/* .cards {
   width: 100%;
   padding: 0.5em 2em;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  padding-top: 6em;
+} */
+
+.cards {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(min-content, 32rem));
+  overflow-x: hidden;
+  padding: 0 0.5em;
   padding-top: 6em;
 }
 
 @media screen and (max-width: mediaQuery) {
   .cards {
-    flex-direction: column;
+    grid-template-columns: repeat(1, minmax(min-content, 32rem));
   }
 }

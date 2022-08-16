@@ -17,6 +17,8 @@
   padding: 0.5em 2em;
   scrollbar-width: 6px;
   scrollbar-color: makerLightGrey transparent;
+  margin: 0 auto;
+  padding-bottom: 4em;
 }
 
 .button {
@@ -58,22 +60,30 @@
   cursor: pointer;
 }
 
-.todos {
+/* .todos {
   width: 100%;
   padding: 0.5em 2em;
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
   padding-top: 6em;
   padding-bottom: 3em;
+} */
+
+.todos {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(min-content, 32rem));
+  overflow-x: hidden;
+  padding: 0 1em;
+  padding-top: 6em;
 }
 
 @media screen and (max-width: mediaQuery) {
-  .container {
-    flex-direction: column;
+  .todos {
+    grid-template-columns: repeat(1, minmax(min-content, 32rem));
   }
 
   .todo {
