@@ -2,6 +2,7 @@ import React, { memo, useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './card_add_form.module.css';
 import { v4 as uuidv4 } from 'uuid';
+import CloseButton from '../close_button/close_button';
 
 const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
   const formRef = useRef();
@@ -48,9 +49,14 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
     }
   };
 
+  const onClickCloseBtn = () => {
+    setNewCard(false);
+  }
+
   return (
     <div onClick={onClose} className={styles.overlay}>
       <div className={styles.container}>
+        <CloseButton onClick={onClickCloseBtn} />
         <form ref={formRef} className={styles.form}>
           <input
             ref={nameRef}

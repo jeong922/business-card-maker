@@ -2,6 +2,7 @@ import React from 'react';
 import { useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Button from '../button/button';
+import CloseButton from '../close_button/close_button';
 import styles from './todo_add._form.module.css';
 
 const TodoAddForm = ({ setNewTodo, addTodo }) => {
@@ -29,9 +30,15 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
     }
   };
 
+  const onClickCloseBtn = () => {
+    setNewTodo(false);
+  }
+
+
   return (
     <div className={styles.overlay} onClick={onClose}>
       <div className={styles.container}>
+        <CloseButton onClick={onClickCloseBtn} />
         <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
           <div className={styles.inputWrapper}>
             <span className={styles.span}>START</span>

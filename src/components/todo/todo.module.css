@@ -1,5 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerShadow, makerLightGrey , makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
+@value makerShadow, makerLightGrey, makerDarkGrey , makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
 
 /* .todo {
   position: relative;
@@ -49,6 +49,11 @@
   color: inherit;
   font-size: 1em;
   border: none;
+}
+
+.delete:hover,
+.edit:hover {
+  color: makerDarkGrey;
 }
 
 .delete:hover {

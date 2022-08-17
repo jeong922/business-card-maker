@@ -1,4 +1,4 @@
-@value makerLightGrey, makerDarkGrey, makerBlack, makerWhite from '../../common/colors.css';
+@value makerLightGrey, makerDarkGrey, makerBlack, makerShadow, makerWhite from '../../common/colors.css';
 
 .button {
   position: fixed;
@@ -11,6 +11,7 @@
   border: none;
   border-radius: 50%;
   font-size: 1.3rem;
+  box-shadow: 6px 6px 8px 0px makerShadow;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   z-index: 2;
