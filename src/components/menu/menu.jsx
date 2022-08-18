@@ -1,9 +1,10 @@
-import React, { memo, useEffect } from 'react';
-import styles from './menu.module.css';
-import { Link } from 'react-router-dom';
+import React, { memo, useEffect } from "react";
+import styles from "./menu.module.css";
+import { Link } from "react-router-dom";
+import ThemeButton from "../theme_button/theme_button";
 
 const Menu = ({ onLogout, show, setShow, pathName }) => {
-  const displayType = show ? styles.show : '';
+  const displayType = show ? styles.show : "";
 
   const handleResize = () => {
     if (window.innerWidth > 992) {
@@ -13,9 +14,9 @@ const Menu = ({ onLogout, show, setShow, pathName }) => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   });
 
@@ -33,23 +34,26 @@ const Menu = ({ onLogout, show, setShow, pathName }) => {
             <i className="fas fa-times"></i>
           </button>
         </div>
+        <div className={styles.theme}>
+          <ThemeButton />
+        </div>
         <ul className={styles.ul}>
           <Link to="/maker">
             <li className={styles.li} onClick={onClick}>
-              {pathName === '/maker' ? (
-                <i className={`${'fas fa-address-card'} ${styles.icon}`}></i>
+              {pathName === "/maker" ? (
+                <i className={`${"fas fa-address-card"} ${styles.icon}`}></i>
               ) : (
-                <i className={`${'far fa-address-card'} ${styles.icon}`}></i>
+                <i className={`${"far fa-address-card"} ${styles.icon}`}></i>
               )}
               CARD
             </li>
           </Link>
           <Link to="/memo">
             <li className={styles.li} onClick={onClick}>
-              {pathName === '/memo' ? (
-                <i className={`${'fas fa-list-alt'} ${styles.icon}`}></i>
+              {pathName === "/memo" ? (
+                <i className={`${"fas fa-list-alt"} ${styles.icon}`}></i>
               ) : (
-                <i className={`${'far fa-list-alt'} ${styles.icon}`}></i>
+                <i className={`${"far fa-list-alt"} ${styles.icon}`}></i>
               )}
               MEMO
             </li>

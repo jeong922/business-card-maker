@@ -50,6 +50,11 @@
   opacity: 0.8;
 }
 
+.theme {
+  position: relative;
+  width: 100%;
+}
+
 .ul {
   padding: 20px 0;
 }
