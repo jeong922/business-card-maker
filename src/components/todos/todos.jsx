@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Menu from '../menu/menu';
-import styles from './todos.module.css';
-import PageTitle from '../page_title/page_title';
-import Footer from '../footer/footer';
-import { useLocation, useNavigate } from 'react-router-dom';
-import Todo from '../todo/todo';
-import TodoAddForm from '../todo_add_form/todo_add_form';
-import TodoEditForm from '../todo_edit_form/todo_edit_form';
-import AddButton from '../add_button/add_button';
+import React, { useCallback, useEffect, useState } from "react";
+import Menu from "../menu/menu";
+import styles from "./todos.module.css";
+import PageTitle from "../page_title/page_title";
+import Footer from "../footer/footer";
+import { useLocation, useNavigate } from "react-router-dom";
+import Todo from "../todo/todo";
+import TodoAddForm from "../todo_add_form/todo_add_form";
+import TodoEditForm from "../todo_edit_form/todo_edit_form";
+import AddButton from "../add_button/add_button";
 
-const Todos = ({ authService, todoRepository }) => {
+const Todos = ({ authService, todoRepository, isDark, setIsDark }) => {
   const location = useLocation();
   const locationState = location?.state;
   const pathName = location.pathname;
@@ -18,9 +18,10 @@ const Todos = ({ authService, todoRepository }) => {
   const [todos, setTodos] = useState({});
   const [show, setShow] = useState(false);
   const [menuBtn, setMenuBtn] = useState(false);
-  const [id, setId] = useState('');
+  const [id, setId] = useState("");
   const [newTodo, setNewTodo] = useState(false);
   const [editTodo, setEditTodo] = useState(false);
+  const theme = isDark ? styles.dark : styles.light;
 
   const onLogout = useCallback(() => {
     authService.logout();
@@ -35,7 +36,7 @@ const Todos = ({ authService, todoRepository }) => {
       (todos) => {
         setTodos(todos);
       },
-      'todos'
+      "todos"
     );
     return () => stopSync();
   }, [userId, todoRepository]);
@@ -45,7 +46,7 @@ const Todos = ({ authService, todoRepository }) => {
       if (user) {
         setUserId(user.uid);
       } else {
-        navigate('/');
+        navigate("/");
       }
     });
   }, [authService, userId, navigate]);
@@ -56,7 +57,7 @@ const Todos = ({ authService, todoRepository }) => {
       updated[todo.id] = todo;
       return updated;
     });
-    todoRepository.saveItem(userId, todo, 'todos');
+    todoRepository.saveItem(userId, todo, "todos");
   };
 
   const deleteTodo = (todo) => {
@@ -65,7 +66,7 @@ const Todos = ({ authService, todoRepository }) => {
       delete updated[todo.id];
       return updated;
     });
-    todoRepository.removeItem(userId, todo, 'todos');
+    todoRepository.removeItem(userId, todo, "todos");
   };
 
   const handleResize = () => {
@@ -74,9 +75,9 @@ const Todos = ({ authService, todoRepository }) => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -95,12 +96,14 @@ const Todos = ({ authService, todoRepository }) => {
         show={show}
         setShow={setShow}
         pathName={pathName}
+        isDark={isDark}
+        setIsDark={setIsDark}
       />
       <section className={styles.todo}>
-        <div className={styles.top}>
+        <div className={`${styles.top} ${theme}`}>
           <PageTitle title="MEMO" />
           {menuBtn && (
-            <button className={styles.menuBtn} onClick={onClick}>
+            <button className={`${styles.menuBtn} ${theme}`} onClick={onClick}>
               <i className="fas fa-bars"></i>
             </button>
           )}

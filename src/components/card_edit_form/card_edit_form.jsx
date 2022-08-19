@@ -1,6 +1,6 @@
-import React from 'react';
-import CloseButton from '../close_button/close_button';
-import styles from './card_edit_form.module.css';
+import React from "react";
+import CloseButton from "../close_button/close_button";
+import styles from "./card_edit_form.module.css";
 
 const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
   const { name, theme, company, title, email, message, fileName } = card;
@@ -31,13 +31,12 @@ const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
 
   const onClickCloseBtn = () => {
     setEditCard(false);
-  }
-
+  };
 
   return (
     <div onClick={onClose} className={styles.overlay}>
       <div className={styles.container}>
-      <CloseButton onClick={onClickCloseBtn} />
+        <CloseButton onClick={onClickCloseBtn} />
         <form className={styles.form}>
           <input
             className={styles.input}

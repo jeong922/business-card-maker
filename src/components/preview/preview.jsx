@@ -1,14 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import AddButton from '../add_button/add_button';
-import Card from '../card/card';
-import CardAddForm from '../card_add_form/card_add_form';
-import CardEditForm from '../card_edit_form/card_edit_form';
-import styles from './preview.module.css';
+import React, { useEffect, useState } from "react";
+import AddButton from "../add_button/add_button";
+import Card from "../card/card";
+import CardAddForm from "../card_add_form/card_add_form";
+import CardEditForm from "../card_edit_form/card_edit_form";
+import styles from "./preview.module.css";
 
-const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
+const Preview = ({
+  FileInput,
+  cards,
+  addCard,
+  updateCard,
+  deleteCard,
+  isDark,
+  setIsDark,
+}) => {
   const [newCard, setNewCard] = useState(false);
   const [editCard, setEditCard] = useState(false);
-  const [id, setId] = useState('');
+  const [id, setId] = useState("");
 
   const onClick = () => {
     setNewCard(true);
@@ -24,8 +32,8 @@ const Preview = ({ FileInput, cards, addCard, updateCard, deleteCard }) => {
 
       return () => {
         const scrollY = document.body.style.top;
-        document.body.style.cssText = '';
-        window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
+        document.body.style.cssText = "";
+        window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
       };
     }
   }, [newCard]);

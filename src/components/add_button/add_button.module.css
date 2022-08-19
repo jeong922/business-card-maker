@@ -1,22 +1,23 @@
-@value makerLightGrey, makerDarkGrey, makerBlack, makerShadow, makerWhite from '../../common/colors.css';
+@value makerLightGrey, makerGreen ,makerDarkGrey, makerBlack, makerShadow, makerWhite from '../../common/colors.css';
 
 .button {
   position: fixed;
-  bottom: 2.5em;
+  bottom: 3em;
   right: 1.5em;
   width: 3rem;
   height: 3rem;
-  background-color: makerBlack;
+  background-color: makerGreen;
   color: makerWhite;
   border: none;
   border-radius: 50%;
   font-size: 1.3rem;
-  box-shadow: 6px 6px 8px 0px makerShadow;
+  box-shadow: 5px 5px 15px 5px makerShadow;
   transition: all 300ms ease-in-out;
   cursor: pointer;
   z-index: 2;
 }
 
 .button:hover {
-  background-color: makerDarkGrey;
+  background-color: makerLightGrey;
+  color: makerBlack;
 }

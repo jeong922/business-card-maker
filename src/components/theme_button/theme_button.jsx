@@ -1,13 +1,16 @@
 import React from "react";
-import { useState } from "react";
 import styles from "./theme_button.module.css";
 
-const ThemeButton = () => {
-  const [isClick, setIsClick] = useState(false);
+const ThemeButton = ({ isDark, setIsDark }) => {
+  const onClick = () => {
+    isDark ? setIsDark(false) : setIsDark(true);
+  };
+
+  const theme = isDark ? styles.dark : styles.light;
 
   return (
-    <button className={styles.wrapper}>
-      <div className={styles.button}></div>
+    <button className={`${styles.wrapper} ${theme}`} onClick={onClick}>
+      <div className={`${styles.button} ${theme}`}></div>
     </button>
   );
 };

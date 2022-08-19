@@ -2,15 +2,16 @@
 
 @value makerBlack: black;
 @value makerWhite: white;
+@value bgBlack: #212121;
 @value makerOverlay: rgba(0, 0, 0, 0.7);
 @value makerDarkGrey: #5f5f5fe1;
 @value makerLightGrey: #e8e7e6;
 @value makerLightCard: rgba(255, 255, 255, 0.623);
 @value makerDarkCard: rgba(0, 0, 0, 0.8);
 @value makerLightPink: #ffeae8;
+@value accentColor: #9cb3d1;
 @value makerGrey: #626262;
 @value makerGreen: #385461;
-@value makerPink: pink;
-@value makerShadow: rgba(179, 179, 179, 0.5);
+@value makerShadow: rgb(82, 82, 82, 0.3);
 @value makerColorful: linear-gradient(166deg, rgba(237, 193, 211, 1) 0%,rgba(212, 149, 161, 1) 60%, rgba(162, 63, 63, 1) 100%, rgba(127, 188, 242, 1) 100%);
 @value makerWheat: wheat;

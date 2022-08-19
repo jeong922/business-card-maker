@@ -11,7 +11,7 @@
   padding: 0.5rem;
   margin: 0.5rem 0;
   border-radius: 1rem;
-  box-shadow: 6px 6px 8px 0px makerShadow;
+  box-shadow: 5px 5px 15px 5px makerShadow;
 }
 
 .card.dark {
@@ -95,7 +95,7 @@
 }
 
 .company::after {
-  content: '';
+  content: "";
   display: block;
   width: 90%;
   height: 2px;

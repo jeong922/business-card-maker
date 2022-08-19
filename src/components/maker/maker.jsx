@@ -1,12 +1,18 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import Footer from '../footer/footer';
-import styles from './maker.module.css';
-import { useLocation, useNavigate } from 'react-router-dom';
-import Preview from '../preview/preview';
-import Menu from '../menu/menu';
-import PageTitle from '../page_title/page_title';
+import React, { useCallback, useEffect, useState } from "react";
+import Footer from "../footer/footer";
+import styles from "./maker.module.css";
+import { useLocation, useNavigate } from "react-router-dom";
+import Preview from "../preview/preview";
+import Menu from "../menu/menu";
+import PageTitle from "../page_title/page_title";
 
-const Maker = ({ FileInput, authService, cardRepository }) => {
+const Maker = ({
+  FileInput,
+  authService,
+  cardRepository,
+  isDark,
+  setIsDark,
+}) => {
   const location = useLocation();
   const locationState = location?.state;
   const pathName = location.pathname;
@@ -15,6 +21,8 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
   const [userId, setUserId] = useState(locationState && locationState.id);
   const [menuBtn, setMenuBtn] = useState(false);
   const [show, setShow] = useState(false);
+  const theme = isDark ? styles.dark : styles.light;
+
   const onLogout = useCallback(() => {
     authService.logout();
   }, [authService]);
@@ -28,7 +36,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       (cards) => {
         setCards(cards);
       },
-      'cards'
+      "cards"
     );
     return () => stopSync();
   }, [userId, cardRepository]);
@@ -38,7 +46,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       if (user) {
         setUserId(user.uid);
       } else {
-        navigate('/');
+        navigate("/");
       }
     });
   }, [authService, userId, navigate]);
@@ -49,7 +57,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       updated[card.id] = card;
       return updated;
     });
-    cardRepository.saveItem(userId, card, 'cards');
+    cardRepository.saveItem(userId, card, "cards");
   };
 
   const deleteCard = (card) => {
@@ -58,7 +66,7 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
       delete updated[card.id];
       return updated;
     });
-    cardRepository.removeItem(userId, card, 'cards');
+    cardRepository.removeItem(userId, card, "cards");
   };
 
   const handleResize = () => {
@@ -67,9 +75,9 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
 
   useEffect(() => {
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -84,12 +92,14 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
         show={show}
         setShow={setShow}
         pathName={pathName}
+        isDark={isDark}
+        setIsDark={setIsDark}
       />
       <section className={styles.maker}>
-        <div className={styles.top}>
+        <div className={`${styles.top} ${theme}`}>
           <PageTitle title="CARD" />
           {menuBtn && (
-            <button className={styles.menuBtn} onClick={onClick}>
+            <button className={`${styles.menuBtn} ${theme}`} onClick={onClick}>
               <i className="fas fa-bars"></i>
             </button>
           )}
@@ -101,6 +111,8 @@ const Maker = ({ FileInput, authService, cardRepository }) => {
             addCard={createOrUpdateCard}
             updateCard={createOrUpdateCard}
             deleteCard={deleteCard}
+            isDark={isDark}
+            setIsDark={setIsDark}
           />
         </div>
         <Footer />

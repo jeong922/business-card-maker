@@ -1,4 +1,4 @@
-@value makerGrey from './common/colors.css';
+@value makerBlack, bgBlack, makerWhite , makerGrey from './common/colors.css';
 
 * {
   box-sizing: border-box;
@@ -12,6 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.app.dark {
+  background-color: bgBlack;
+  color: makerWhite;
+}
+
+.app.light {
+  background-color: makerWhite;
+  color: makerBlack;
 }
 
 .container {

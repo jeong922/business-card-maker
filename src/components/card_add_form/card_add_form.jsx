@@ -1,8 +1,8 @@
-import React, { memo, useRef, useState } from 'react';
-import Button from '../button/button';
-import styles from './card_add_form.module.css';
-import { v4 as uuidv4 } from 'uuid';
-import CloseButton from '../close_button/close_button';
+import React, { memo, useRef, useState } from "react";
+import Button from "../button/button";
+import styles from "./card_add_form.module.css";
+import { v4 as uuidv4 } from "uuid";
+import CloseButton from "../close_button/close_button";
 
 const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
   const formRef = useRef();
@@ -25,14 +25,14 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
     e.preventDefault();
     const card = {
       id: uuidv4(),
-      name: nameRef.current.value || '',
-      company: companyRef.current.value || '',
+      name: nameRef.current.value || "",
+      company: companyRef.current.value || "",
       theme: themeRef.current.value,
-      title: titleRef.current.value || '',
-      email: emailRef.current.value || '',
-      message: messageRef.current.value || '',
-      fileName: file.fileName || '',
-      fileURL: file.fileURL || '',
+      title: titleRef.current.value || "",
+      email: emailRef.current.value || "",
+      message: messageRef.current.value || "",
+      fileName: file.fileName || "",
+      fileURL: file.fileURL || "",
     };
     formRef.current.reset();
     setFile({
@@ -51,7 +51,7 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
 
   const onClickCloseBtn = () => {
     setNewCard(false);
-  }
+  };
 
   return (
     <div onClick={onClose} className={styles.overlay}>

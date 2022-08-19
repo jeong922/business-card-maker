@@ -1,9 +1,9 @@
-import React from 'react';
-import { useRef } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import Button from '../button/button';
-import CloseButton from '../close_button/close_button';
-import styles from './todo_add._form.module.css';
+import React from "react";
+import { useRef } from "react";
+import { v4 as uuidv4 } from "uuid";
+import Button from "../button/button";
+import CloseButton from "../close_button/close_button";
+import styles from "./todo_add._form.module.css";
 
 const TodoAddForm = ({ setNewTodo, addTodo }) => {
   const formRef = useRef();
@@ -15,9 +15,9 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
     e.preventDefault();
     const todo = {
       id: uuidv4(),
-      text: textRef.current.value || '',
-      start: startRef.current.value || '',
-      end: endRef.current.value || '',
+      text: textRef.current.value || "",
+      start: startRef.current.value || "",
+      end: endRef.current.value || "",
     };
     formRef.current.reset();
     addTodo(todo);
@@ -32,8 +32,7 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
 
   const onClickCloseBtn = () => {
     setNewTodo(false);
-  }
-
+  };
 
   return (
     <div className={styles.overlay} onClick={onClose}>
@@ -49,11 +48,11 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
             <input ref={endRef} className={styles.input} type="date" />
           </div>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>TODO</span>
+            <span className={styles.span}>TEXT</span>
             <textarea
               ref={textRef}
               className={`${styles.input} ${styles.todo}`}
-              placeholder="todo"
+              placeholder="text"
             />
           </div>
           <Button name="Add" onClick={onSubmit} />

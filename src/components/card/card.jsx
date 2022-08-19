@@ -1,7 +1,7 @@
-import React, { memo } from 'react';
-import styles from './card.module.css';
+import React, { memo } from "react";
+import styles from "./card.module.css";
 
-const DEFAULT_IMAGE = '/images/default_logo.png';
+const DEFAULT_IMAGE = "/images/default_logo.png";
 const Card = memo(({ card, setEditCard, setId, deleteCard }) => {
   const { name, theme, company, title, email, message, fileURL } = card;
   const url = fileURL || DEFAULT_IMAGE;
@@ -39,11 +39,11 @@ const Card = memo(({ card, setEditCard, setId, deleteCard }) => {
 
 function getStyles(theme) {
   switch (theme) {
-    case 'dark':
+    case "dark":
       return styles.dark;
-    case 'light':
+    case "light":
       return styles.light;
-    case 'colorful':
+    case "colorful":
       return styles.colorful;
     default:
       throw new Error(`unknown theme: ${theme}`);
