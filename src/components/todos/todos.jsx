@@ -21,7 +21,7 @@ const Todos = ({ authService, todoRepository, isDark, setIsDark }) => {
   const [id, setId] = useState("");
   const [newTodo, setNewTodo] = useState(false);
   const [editTodo, setEditTodo] = useState(false);
-  const theme = isDark ? styles.dark : styles.light;
+  const theme = isDark === "dark" ? styles.dark : styles.light;
 
   const onLogout = useCallback(() => {
     authService.logout();
@@ -122,13 +122,18 @@ const Todos = ({ authService, todoRepository, isDark, setIsDark }) => {
             ))}
           </ul>
           {newTodo && (
-            <TodoAddForm setNewTodo={setNewTodo} addTodo={createOrUpdateTodo} />
+            <TodoAddForm
+              setNewTodo={setNewTodo}
+              addTodo={createOrUpdateTodo}
+              isDark={isDark}
+            />
           )}
           {editTodo && (
             <TodoEditForm
               todo={todos[id]}
               updateTodo={createOrUpdateTodo}
               setEditTodo={setEditTodo}
+              isDark={isDark}
             />
           )}
         </div>

@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styles from "./app.module.css";
@@ -6,15 +7,27 @@ import Maker from "./components/maker/maker";
 import Todos from "./components/todos/todos";
 
 function App({ FileInput, authService, cardRepository, todoRepository }) {
-  const [isDark, setIsDark] = useState(false); // true : dark , false : light
+  const getTheme = useCallback(() => {
+    const theme = localStorage.getItem("mytheme");
+    if (!theme) {
+      return "light";
+    } else {
+      return theme;
+    }
+  }, []);
 
-  const theme = isDark ? styles.dark : styles.light;
+  const [isDark, setIsDark] = useState(getTheme); // true : dark , false : light
+
+  const theme = isDark === "dark" ? styles.dark : styles.light;
 
   return (
     <div className={`${styles.app} ${theme}`}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login authService={authService} />}></Route>
+          <Route
+            path="/"
+            element={<Login authService={authService} isDark={isDark} />}
+          ></Route>
           <Route
             path="/maker"
             element={

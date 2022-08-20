@@ -58,6 +58,7 @@ const Preview = ({
           FileInput={FileInput}
           onAdd={addCard}
           setNewCard={setNewCard}
+          isDark={isDark}
         />
       )}
 
@@ -67,6 +68,7 @@ const Preview = ({
           card={cards[id]}
           updateCard={updateCard}
           setEditCard={setEditCard}
+          isDark={isDark}
         />
       )}
     </section>

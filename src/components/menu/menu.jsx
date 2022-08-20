@@ -5,7 +5,7 @@ import ThemeButton from "../theme_button/theme_button";
 
 const Menu = ({ onLogout, show, setShow, pathName, isDark, setIsDark }) => {
   const displayType = show ? styles.show : "";
-  const theme = isDark ? styles.dark : styles.light;
+  const theme = isDark === "dark" ? styles.dark : styles.light;
 
   const handleResize = () => {
     if (window.innerWidth > 992) {

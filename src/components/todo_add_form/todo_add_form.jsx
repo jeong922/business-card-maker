@@ -5,11 +5,13 @@ import Button from "../button/button";
 import CloseButton from "../close_button/close_button";
 import styles from "./todo_add._form.module.css";
 
-const TodoAddForm = ({ setNewTodo, addTodo }) => {
+const TodoAddForm = ({ setNewTodo, addTodo, isDark }) => {
   const formRef = useRef();
   const startRef = useRef();
   const endRef = useRef();
   const textRef = useRef();
+
+  const themeType = isDark === "dark" ? styles.dark : styles.light;
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +38,7 @@ const TodoAddForm = ({ setNewTodo, addTodo }) => {
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${themeType}`}>
         <CloseButton onClick={onClickCloseBtn} />
         <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
           <div className={styles.inputWrapper}>

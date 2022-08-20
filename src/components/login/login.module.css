@@ -1,4 +1,4 @@
-@value makerDarkGrey, makerLightGrey, makerWhite from '../../common/colors.css';
+@value makerDarkGrey, makerLightGrey, makerBlack, makerWhite from '../../common/colors.css';
 
 .login {
   width: 30em;
@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: makerWhite;
+  background-color: transparent;
 }
 
 .container {
@@ -39,6 +39,7 @@
   font-size: 1.2rem;
   border-radius: 1.2rem;
   background-color: transparent;
+  color: inherit;
   border: 0.2rem solid makerDarkGrey;
   outline: none;
   cursor: pointer;
@@ -46,6 +47,10 @@
 
 .button:hover {
   background-color: makerLightGrey;
+}
+
+.button.dark:hover {
+  color: makerBlack;
 }
 
 .svg {

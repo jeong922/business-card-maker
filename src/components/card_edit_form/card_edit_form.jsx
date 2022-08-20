@@ -2,8 +2,11 @@ import React from "react";
 import CloseButton from "../close_button/close_button";
 import styles from "./card_edit_form.module.css";
 
-const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
+const CardEditForm = ({ FileInput, card, updateCard, setEditCard, isDark }) => {
   const { name, theme, company, title, email, message, fileName } = card;
+
+  const themeType = isDark === "dark" ? styles.dark : styles.light;
+
   const onFileChange = (file) => {
     updateCard({
       ...card,
@@ -35,7 +38,7 @@ const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
 
   return (
     <div onClick={onClose} className={styles.overlay}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${themeType}`}>
         <CloseButton onClick={onClickCloseBtn} />
         <form className={styles.form}>
           <input
@@ -61,9 +64,18 @@ const CardEditForm = ({ FileInput, card, updateCard, setEditCard }) => {
             onChange={onChange}
             placeholder="Theme"
           >
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-            <option value="colorful">Colorful</option>
+            <option className={`${styles.option} ${themeType}`} value="light">
+              Light
+            </option>
+            <option className={`${styles.option} ${themeType}`} value="dark">
+              Dark
+            </option>
+            <option
+              className={`${styles.option} ${themeType}`}
+              value="colorful"
+            >
+              Colorful
+            </option>
           </select>
           <input
             className={styles.input}

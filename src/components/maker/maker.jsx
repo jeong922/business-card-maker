@@ -21,7 +21,7 @@ const Maker = ({
   const [userId, setUserId] = useState(locationState && locationState.id);
   const [menuBtn, setMenuBtn] = useState(false);
   const [show, setShow] = useState(false);
-  const theme = isDark ? styles.dark : styles.light;
+  const theme = isDark === "dark" ? styles.dark : styles.light;
 
   const onLogout = useCallback(() => {
     authService.logout();

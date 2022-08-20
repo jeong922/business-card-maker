@@ -4,7 +4,7 @@ import styles from "./card_add_form.module.css";
 import { v4 as uuidv4 } from "uuid";
 import CloseButton from "../close_button/close_button";
 
-const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
+const CardAddForm = memo(({ FileInput, onAdd, setNewCard, isDark }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -13,6 +13,8 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
   const emailRef = useRef();
   const messageRef = useRef();
   const [file, setFile] = useState({ fileName: null, fileURL: null });
+
+  const themeType = isDark === "dark" ? styles.dark : styles.light;
 
   const onFileChange = (file) => {
     setFile({
@@ -55,9 +57,9 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
 
   return (
     <div onClick={onClose} className={styles.overlay}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${themeType}`}>
         <CloseButton onClick={onClickCloseBtn} />
-        <form ref={formRef} className={styles.form}>
+        <form ref={formRef} className={`${styles.form} ${themeType}`}>
           <input
             ref={nameRef}
             className={styles.input}
@@ -78,9 +80,24 @@ const CardAddForm = memo(({ FileInput, onAdd, setNewCard }) => {
             name="theme"
             placeholder="Theme"
           >
-            <option placeholder="light">light</option>
-            <option placeholder="dark">dark</option>
-            <option placeholder="colorful">colorful</option>
+            <option
+              className={`${styles.option} ${themeType}`}
+              placeholder="dark"
+            >
+              dark
+            </option>
+            <option
+              className={`${styles.option} ${themeType}`}
+              placeholder="colorful"
+            >
+              colorful
+            </option>
+            <option
+              className={`${styles.option} ${themeType}`}
+              placeholder="light"
+            >
+              light
+            </option>
           </select>
           <input
             ref={titleRef}
