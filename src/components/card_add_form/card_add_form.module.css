@@ -1,4 +1,4 @@
-@value makerBlack, makerWhite, makerOverlay, makerDarkGrey, bgBlack from '../../common/colors.css';
+@value makerWhite, makerOverlay, makerDarkGray, bgBlack from '../../common/colors.css';
 
 .overlay {
   position: fixed;
@@ -33,8 +33,8 @@
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  border-top: 1px solid makerDarkGrey;
-  border-left: 1px solid makerDarkGrey;
+  border-top: 1px solid makerDarkGray;
+  border-left: 1px solid makerDarkGray;
 }
 
 .input,
@@ -46,8 +46,8 @@
   width: 100%;
   border: 0;
   padding: 0.5em;
-  border-bottom: 1px solid makerDarkGrey;
-  border-right: 1px solid makerDarkGrey;
+  border-bottom: 1px solid makerDarkGray;
+  border-right: 1px solid makerDarkGray;
   background: transparent;
   color: inherit;
 }

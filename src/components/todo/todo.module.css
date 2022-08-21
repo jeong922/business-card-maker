@@ -1,18 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerShadow, makerLightGrey, makerDarkGrey , makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
-
-/* .todo {
-  position: relative;
-  width: 50%;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  margin: 1em;
-  padding: 1.5em;
-  border-radius: 1em;
-  box-shadow: 6px 6px 8px 0px makerShadow;
-  background-color: rgba(199, 199, 199, 0.192);
-} */
+@value makerShadow, makerLightGray, makerDarkGray , makerBlack, makerWhite, makerColorful, makerDarkGray, makerDarkCard, makerLightCard, makerShadow from '../../common/colors.css';
 
 .todo {
   position: relative;
@@ -53,7 +40,7 @@
 
 .delete:hover,
 .edit:hover {
-  color: makerDarkGrey;
+  color: makerDarkGray;
 }
 
 .delete:hover {
@@ -76,7 +63,7 @@
 .schedule {
   position: absolute;
   bottom: 12px;
-  color: makerDarkGrey;
+  color: makerDarkGray;
 }
 
 .date {

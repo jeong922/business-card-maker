@@ -1,4 +1,4 @@
-@value makerLightGrey, makerLightPink, accentColor from '../../common/colors.css';
+@value makerLightGray, accentColor from '../../common/colors.css';
 
 .container {
   width: 100%;
@@ -21,8 +21,8 @@
   cursor: pointer;
 }
 
-.button.grey {
-  background-color: makerLightGrey;
+.button.gray {
+  background-color: makerLightGray;
 }
 
 .button.accent {

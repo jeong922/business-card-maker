@@ -1,5 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerShadow, makerBlack, makerWhite, makerColorful, makerDarkGrey, makerDarkCard, makerLightCard from '../../common/colors.css';
+@value makerShadow, makerBlack, makerWhite, makerColorful, makerDarkGray, makerDarkCard, makerLightCard, mediaQuerySmall from '../../common/colors.css';
 
 .card {
   width: 100%;
@@ -95,15 +95,15 @@
 }
 
 .company::after {
-  content: "";
+  content: '';
   display: block;
   width: 90%;
   height: 2px;
-  background-color: makerDarkGrey;
+  background-color: makerDarkGray;
   transform: translateY(0.5em);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: mediaQuerySmall) {
   .card {
     font-size: 14px;
   }

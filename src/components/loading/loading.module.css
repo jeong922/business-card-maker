@@ -1,10 +1,10 @@
-@value makerLightGrey, makerPink from '../../common/colors.css';
+@value makerLightGray, makerPink from '../../common/colors.css';
 
 .loading {
   width: 1.5em;
   height: 1.5em;
   border-radius: 50%;
-  border: 3px solid makerLightGrey;
+  border: 3px solid makerLightGray;
   border-top: 3px solid makerPink;
   animation: spin 2s linear infinite;
 }

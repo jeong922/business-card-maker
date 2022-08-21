@@ -1,4 +1,4 @@
-@value makerLightGrey, makerGreen ,makerDarkGrey, makerBlack, makerShadow, makerWhite from '../../common/colors.css';
+@value makerLightGray, makerGreen makerBlack, makerShadow, makerWhite from '../../common/colors.css';
 
 .button {
   position: fixed;
@@ -18,6 +18,6 @@
 }
 
 .button:hover {
-  background-color: makerLightGrey;
+  background-color: makerLightGray;
   color: makerBlack;
 }

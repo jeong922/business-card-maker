@@ -1,5 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerLightGrey, bgBlack, makerBlack, makerWhite, makerGreen  from '../../common/colors.css';
+@value makerLightGray, bgBlack, makerBlack, makerWhite, makerGreen from '../../common/colors.css';
 
 .nav {
   position: fixed;
@@ -11,7 +11,7 @@
   z-index: 99;
   background-color: makerWhite;
   color: makerBlack;
-  border-right: 1px solid makerLightGrey;
+  border-right: 1px solid makerLightGray;
   transition: transform 200ms ease-in-out;
 }
 
@@ -36,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 1.2rem;
-  border-bottom: 1px solid makerLightGrey;
+  border-bottom: 1px solid makerLightGray;
 }
 
 .title {
@@ -58,7 +58,7 @@
 }
 
 .closeBtn.dark {
-  color: makerLightGrey;
+  color: makerLightGray;
 }
 
 .closeBtn:hover {
@@ -81,7 +81,7 @@
 }
 
 .li:hover {
-  background-color: makerLightGrey;
+  background-color: makerLightGray;
 }
 
 .li.dark:hover {

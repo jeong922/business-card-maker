@@ -1,6 +1,6 @@
-import React, { memo, useRef, useState } from "react";
-import Loading from "../loading/loading";
-import styles from "./image_file_input.module.css";
+import React, { memo, useRef, useState } from 'react';
+import Loading from '../loading/loading';
+import styles from './image_file_input.module.css';
 
 const ImageFileInput = memo(({ imageUploader, name, onFileChange }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -30,10 +30,10 @@ const ImageFileInput = memo(({ imageUploader, name, onFileChange }) => {
       />
       {!isLoading && (
         <button
-          className={`${styles.button} ${name ? styles.accent : styles.grey}`}
+          className={`${styles.button} ${name ? styles.accent : styles.gray}`}
           onClick={onButtonClick}
         >
-          {name || "No file"}
+          {name || 'No file'}
         </button>
       )}
       {isLoading && <Loading />}

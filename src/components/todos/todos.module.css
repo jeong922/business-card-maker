@@ -1,5 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerWhite, makerLightGrey, bgBlack, makerBlack, makerDarkGrey from '../../common/colors.css';
+@value makerWhite, makerLightGray, bgBlack, makerBlack, makerDarkGray from '../../common/colors.css';
 
 .todo {
   width: 100%;
@@ -8,7 +8,7 @@
   flex-direction: column;
   padding-left: 245px;
   scrollbar-width: 6px;
-  scrollbar-color: makerLightGrey transparent;
+  scrollbar-color: makerLightGray transparent;
   flex: 1;
   min-height: 0;
 }
@@ -16,7 +16,7 @@
 .container {
   padding: 0.5em 2em;
   scrollbar-width: 6px;
-  scrollbar-color: makerLightGrey transparent;
+  scrollbar-color: makerLightGray transparent;
   margin: 0 auto;
   padding-bottom: 4em;
 }
@@ -28,7 +28,7 @@
 }
 
 .newTodoBtn {
-  color: makerDarkGrey;
+  color: makerDarkGray;
   font-size: 1.5em;
   margin-right: 1.2em;
   background-color: transparent;
@@ -65,20 +65,8 @@
 }
 
 .menuBtn.dark {
-  color: makerLightGrey;
+  color: makerLightGray;
 }
-
-/* .todos {
-  width: 100%;
-  padding: 0.5em 2em;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  overflow-x: hidden;
-  padding-top: 6em;
-  padding-bottom: 3em;
-} */
 
 .todos {
   display: grid;

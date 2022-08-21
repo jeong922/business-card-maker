@@ -1,5 +1,5 @@
 @value mediaQuery from '../../common/size.css';
-@value makerWhite, bgBlack,makerLightGrey, makerBlack, makerDarkGrey from '../../common/colors.css';
+@value makerWhite, bgBlack, makerLightGray from '../../common/colors.css';
 
 .wrapper {
   width: 100%;
@@ -41,11 +41,10 @@
 }
 
 .menuBtn.dark {
-  color: makerLightGrey;
+  color: makerLightGray;
 }
 
 .container {
-  /* display: flex; */
   display: flex;
   flex: 1;
   min-height: 0;

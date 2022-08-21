@@ -1,4 +1,4 @@
-@value makerLightGrey, makerBlack, makerWhite, makerGreen  from '../../common/colors.css';
+@value makerLightGray, makerGreen from '../../common/colors.css';
 .wrapper,
 .wrapper.light {
   position: absolute;
@@ -10,7 +10,7 @@
   border-radius: 16px;
   border: none;
   cursor: pointer;
-  background-color: makerLightGrey;
+  background-color: makerLightGray;
 }
 
 .wrapper.dark {
@@ -28,6 +28,6 @@
 }
 
 .button.dark {
-  background-color: makerLightGrey;
+  background-color: makerLightGray;
   transform: translateX(27px);
 }

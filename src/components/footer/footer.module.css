@@ -1,4 +1,4 @@
-@value makerGreen, makerDarkGrey, accentColor from '../../common/colors.css';
+@value accentColor from '../../common/colors.css';
 
 .footer {
   position: fixed;
