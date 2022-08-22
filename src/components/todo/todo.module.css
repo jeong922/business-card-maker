@@ -40,11 +40,7 @@
 
 .delete:hover,
 .edit:hover {
-  color: makerDarkGray;
-}
-
-.delete:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .container {
@@ -64,6 +60,12 @@
   position: absolute;
   bottom: 12px;
   color: makerDarkGray;
+}
+
+.schedule.dark {
+  position: absolute;
+  bottom: 12px;
+  color: makerLightGray;
 }
 
 .date {

@@ -1,4 +1,4 @@
-@value makerBlack, makerWhite, makerOverlay from '../../common/colors.css';
+@value makerBlack, makerWhite, makerOverlay, bgBlack, makerDarkGray from '../../common/colors.css';
 
 .overlay {
   position: fixed;
@@ -25,6 +25,10 @@
   padding: 0 1em;
 }
 
+.container.dark {
+  background-color: bgBlack;
+}
+
 .form {
   width: 100%;
   padding: 1.5em;
@@ -47,6 +51,9 @@
   width: 200px;
   padding: 0.5em;
   margin-left: 1em;
+  background: transparent;
+  color: inherit;
+  border: 1px solid makerDarkGray;
 }
 
 .todo {

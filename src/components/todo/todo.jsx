@@ -1,8 +1,10 @@
 import React, { memo } from 'react';
 import styles from './todo.module.css';
 
-const Todo = memo(({ todo, setId, setEditTodo, deleteTodo }) => {
+const Todo = memo(({ todo, setId, setEditTodo, deleteTodo, isDark }) => {
   const { text, start, end } = todo;
+
+  const themeType = isDark === 'dark' ? styles.dark : styles.light;
 
   const onClick = () => {
     setEditTodo(true);
@@ -24,7 +26,7 @@ const Todo = memo(({ todo, setId, setEditTodo, deleteTodo }) => {
       <div className={styles.container}>
         <p className={styles.text}>{text}</p>
         {(start || end) && (
-          <div className={styles.schedule}>
+          <div className={`${styles.schedule} ${themeType}`}>
             <i className={`${'far fa-calendar-alt'} ${styles.date}`}></i>
             <span className={styles.date}>{start}</span>
             <span className={styles.date}>~</span>

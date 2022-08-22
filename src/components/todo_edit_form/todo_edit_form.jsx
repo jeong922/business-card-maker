@@ -1,9 +1,12 @@
-import React from "react";
-import CloseButton from "../close_button/close_button";
-import styles from "./todo_edit_form.module.css";
+import React from 'react';
+import CloseButton from '../close_button/close_button';
+import styles from './todo_edit_form.module.css';
 
-const TodoEditForm = ({ todo, updateTodo, setEditTodo }) => {
+const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
   const { text, start, end } = todo;
+
+  const themeType = isDark === 'dark' ? styles.dark : styles.light;
+
   const onChange = (e) => {
     if (e.currentTarget == null) {
       return;
@@ -27,7 +30,7 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo }) => {
 
   return (
     <div className={styles.overlay} onClick={onClose}>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${themeType}`}>
         <CloseButton onClick={onClickCloseBtn} />
         <form className={styles.form}>
           <div className={styles.inputWrapper}>

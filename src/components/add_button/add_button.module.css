@@ -18,6 +18,5 @@
 }
 
 .button:hover {
-  background-color: makerLightGray;
-  color: makerBlack;
+  transform: scale(1.1);
 }

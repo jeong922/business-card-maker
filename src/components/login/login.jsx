@@ -1,17 +1,17 @@
-import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
-import styles from "./login.module.css";
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styles from './login.module.css';
 
 const Login = ({ authService, isDark }) => {
   const navigate = useNavigate();
   const goToMaker = (userId) => {
     navigate({
-      pathname: "/maker",
+      pathname: '/maker',
       state: { id: userId },
     });
   };
 
-  const theme = isDark === "dark" ? styles.dark : styles.light;
+  const theme = isDark === 'dark' ? styles.dark : styles.light;
 
   const onLogin = (event) => {
     authService
