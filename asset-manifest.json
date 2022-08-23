@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/business-card-maker/static/css/main.beec9bb4.css",
-    "main.js": "/business-card-maker/static/js/main.5c629311.js",
+    "main.js": "/business-card-maker/static/js/main.d1acaa07.js",
     "index.html": "/business-card-maker/index.html",
     "main.beec9bb4.css.map": "/business-card-maker/static/css/main.beec9bb4.css.map",
-    "main.5c629311.js.map": "/business-card-maker/static/js/main.5c629311.js.map"
+    "main.d1acaa07.js.map": "/business-card-maker/static/js/main.d1acaa07.js.map"
   },
   "entrypoints": [
     "static/css/main.beec9bb4.css",
-    "static/js/main.5c629311.js"
+    "static/js/main.d1acaa07.js"
   ]
 }
