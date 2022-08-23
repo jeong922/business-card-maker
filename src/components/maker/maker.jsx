@@ -1,10 +1,10 @@
-import React, { useCallback, useEffect, useState } from "react";
-import Footer from "../footer/footer";
-import styles from "./maker.module.css";
-import { useLocation, useNavigate } from "react-router-dom";
-import Preview from "../preview/preview";
-import Menu from "../menu/menu";
-import PageTitle from "../page_title/page_title";
+import React, { useCallback, useEffect, useState } from 'react';
+import Footer from '../footer/footer';
+import styles from './maker.module.css';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Preview from '../preview/preview';
+import Menu from '../menu/menu';
+import PageTitle from '../page_title/page_title';
 
 const Maker = ({
   FileInput,
@@ -21,7 +21,7 @@ const Maker = ({
   const [userId, setUserId] = useState(locationState && locationState.id);
   const [menuBtn, setMenuBtn] = useState(false);
   const [show, setShow] = useState(false);
-  const theme = isDark === "dark" ? styles.dark : styles.light;
+  const theme = isDark === 'dark' ? styles.dark : styles.light;
 
   const onLogout = useCallback(() => {
     authService.logout();
@@ -36,7 +36,7 @@ const Maker = ({
       (cards) => {
         setCards(cards);
       },
-      "cards"
+      'cards'
     );
     return () => stopSync();
   }, [userId, cardRepository]);
@@ -46,7 +46,7 @@ const Maker = ({
       if (user) {
         setUserId(user.uid);
       } else {
-        navigate("/");
+        navigate('/');
       }
     });
   }, [authService, userId, navigate]);
@@ -57,7 +57,7 @@ const Maker = ({
       updated[card.id] = card;
       return updated;
     });
-    cardRepository.saveItem(userId, card, "cards");
+    cardRepository.saveItem(userId, card, 'cards');
   };
 
   const deleteCard = (card) => {
@@ -66,7 +66,7 @@ const Maker = ({
       delete updated[card.id];
       return updated;
     });
-    cardRepository.removeItem(userId, card, "cards");
+    cardRepository.removeItem(userId, card, 'cards');
   };
 
   const handleResize = () => {
@@ -75,9 +75,9 @@ const Maker = ({
 
   useEffect(() => {
     handleResize();
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
