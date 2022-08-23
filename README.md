@@ -18,35 +18,35 @@
   </p>
 - card
   - 오른쪽 하단 + 모양 버튼을 누르면 새로운 명함을 추가할 수 있다.
-  <p align="center">
-  <img src="./public/images/명함추가.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/명함추가.gif" height="200" />
+    </p>
   - 명함의 이름 옆 연필모양 아이콘을 누르면 명함의 내용을 수정할 수 있으며 x 모양을 누르면 card를 삭제할 수 있다.
-  <p align="center">
-  <img src="./public/images/명함수정.gif" height="200" />
-  <img src="./public/images/명함삭제.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/명함수정.gif" height="200" />
+    <img src="./public/images/명함삭제.gif" height="200" />
+    </p>
   - 이미지를 추가하지 않으면 기본이미지가 적용된다.
 - memo
   - 오른쪽 하단 + 모양 버튼을 누르면 새로운 메모를 추가할 수 있다.
-  <p align="center">
-  <img src="./public/images/메모추가.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/메모추가.gif" height="200" />
+    </p>
   - 연필모양 아이콘을 누르면 메모 수정, x 모양 아이콘을 누르면 메모가 삭제 된다.
-  <p align="center">
-  <img src="./public/images/메모수정.gif" height="200" />
-  <img src="./public/images/메모삭제.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/메모수정.gif" height="200" />
+    <img src="./public/images/메모삭제.gif" height="200" />
+    </p>
 - dark mode, light mode
   - 메뉴 오른쪽 상단 쯤에 위치한 버튼을 누르면 dark mode, light mode로 변경 가능하다.
   - localStorage를 이용하여 dark mode, light mode를 저장하도록 구현하였다. (기본값은 light mode)
-  <p align="center">
-  <img src="./public/images/모드.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/모드.gif" height="200" />
+    </p>
   - 메뉴는 화면의 크기에 따라 반응형으로 동작한다.
-  <p align="center">
-  <img src="./public/images/반응형.gif" height="200" />
-  </p>
+    <p align="center">
+    <img src="./public/images/반응형.gif" height="200" />
+    </p>
 
 ### 3. 개선할 사항
 
