@@ -56,7 +56,7 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
           <div className={styles.inputWrapper}>
             <span className={styles.span}>TODO</span>
             <textarea
-              className={`${styles.input} ${styles.todo}`}
+              className={`${styles.input} ${styles.text} ${styles.todo}`}
               name="text"
               value={text}
               placeholder="todo"

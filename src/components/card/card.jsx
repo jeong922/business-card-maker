@@ -1,12 +1,10 @@
 import React, { memo } from 'react';
 import styles from './card.module.css';
 
-// const DEFAULT_IMAGE = '/images/default_logo.png';
+const DEFAULT_IMAGE = '/images/default2.jpg';
 const Card = memo(({ card, setEditCard, setId, deleteCard }) => {
   const { name, theme, company, title, email, message, fileURL } = card;
-
-  console.log(selectImage());
-  const url = fileURL || process.env.PUBLIC_URL + selectImage();
+  const url = fileURL || process.env.PUBLIC_URL + DEFAULT_IMAGE;
 
   const onClick = () => {
     setEditCard(true);
@@ -50,15 +48,6 @@ function getStyles(theme) {
     default:
       throw new Error(`unknown theme: ${theme}`);
   }
-}
-
-function selectImage() {
-  const images = [
-    '/images/default_logo.png',
-    '/images/default1.jpg',
-    '/images/default2.jpg',
-  ];
-  return images[Math.floor(Math.random() * images.length)];
 }
 
 export default Card;

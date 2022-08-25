@@ -2,11 +2,11 @@
 
 ## [클릭😊](https://jeong922.github.io/business-card-maker/)
 
-### 1. 목적
+## 목적
 
 - React, Firebase, PostCSS, cloudinary를 사용하여 명함과 메모 저장 기능 앱 만들기
 
-### 2. 구성
+## 구성
 
 - login
   - GitHub와 Google 계정을 이용하여 로그인하도록 구현하였다.
@@ -50,7 +50,7 @@
     <img src="./public/images/반응형.gif" height="200" />
     </p>
 
-### 3. 개선할 사항
+## 개선할 사항
 
 - [ ] 나름 다크모드 라이트 모드를 구현하긴 했으나 useState를 사용하여 props를 계속 넘겨주는 식으로 구현하여 뭔가 지저분 한것 같고 더 좋은 방법으로 개선해야 할 것 같다. ~~또 다크모드 디자인이 너무 구리다..~~
 - [ ] 메모 기능이 너무 한정적이다. 지금은 단순하게 날짜와 내용만 입력하게 만들었으나 완료 상태를 입력하게 한다던가 Trello나 Notion 같은 기능을 추가해보고 싶다.

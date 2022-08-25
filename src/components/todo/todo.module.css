@@ -55,6 +55,8 @@
   max-height: 5rem;
   padding: 0.5em 0;
   overflow-y: auto;
+  word-break: break-all;
+  white-space: pre-wrap;
 }
 
 .schedule {

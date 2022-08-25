@@ -1,9 +1,9 @@
-import React from "react";
-import { useRef } from "react";
-import { v4 as uuidv4 } from "uuid";
-import Button from "../button/button";
-import CloseButton from "../close_button/close_button";
-import styles from "./todo_add._form.module.css";
+import React from 'react';
+import { useRef } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+import Button from '../button/button';
+import CloseButton from '../close_button/close_button';
+import styles from './todo_add._form.module.css';
 
 const TodoAddForm = ({ setNewTodo, addTodo, isDark }) => {
   const formRef = useRef();
@@ -11,15 +11,15 @@ const TodoAddForm = ({ setNewTodo, addTodo, isDark }) => {
   const endRef = useRef();
   const textRef = useRef();
 
-  const themeType = isDark === "dark" ? styles.dark : styles.light;
+  const themeType = isDark === 'dark' ? styles.dark : styles.light;
 
   const onSubmit = (e) => {
     e.preventDefault();
     const todo = {
       id: uuidv4(),
-      text: textRef.current.value || "",
-      start: startRef.current.value || "",
-      end: endRef.current.value || "",
+      text: textRef.current.value || '',
+      start: startRef.current.value || '',
+      end: endRef.current.value || '',
     };
     formRef.current.reset();
     addTodo(todo);

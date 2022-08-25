@@ -15,8 +15,8 @@
 
 .container {
   position: relative;
-  width: 600px;
-  height: 200px;
+  width: 37em;
+  height: 12.5em;
   background-color: makerWhite;
   border-radius: 1em;
   display: flex;
@@ -43,13 +43,13 @@
 
 .span {
   display: inline-block;
-  width: 50px;
+  width: 3em;
   font-weight: 600;
 }
 
 .input {
-  width: 200px;
-  padding: 0.2em;
+  width: 12.5em;
+  padding: 0.5em;
   margin-left: 1em;
   background-color: transparent;
   color: inherit;
