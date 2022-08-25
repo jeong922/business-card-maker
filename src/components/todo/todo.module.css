@@ -10,7 +10,8 @@
   margin: 0.5em;
   padding: 1.5em;
   border-radius: 1em;
-  box-shadow: 5px 5px 15px 5px makerShadow;
+  /* box-shadow: 5px 5px 15px 5px makerShadow; */
+  box-shadow: 0 5px 18px -7px rgba(0, 0, 0, 1);
   height: 10rem;
   align-items: center;
   background-color: rgba(199, 199, 199, 0.192);
