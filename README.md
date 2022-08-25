@@ -1,5 +1,7 @@
 # My Note
 
+## [클릭😊](https://jeong922.github.io/business-card-maker/)
+
 ### 1. 목적
 
 - React, Firebase, PostCSS, cloudinary를 사용하여 명함과 메모 저장 기능 앱 만들기
