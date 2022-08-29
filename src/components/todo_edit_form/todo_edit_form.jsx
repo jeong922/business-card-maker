@@ -34,8 +34,11 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
         <CloseButton onClick={onClickCloseBtn} />
         <form className={styles.form}>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>START</span>
+            <label for="start" className={styles.span}>
+              START
+            </label>
             <input
+              id="start"
               className={styles.input}
               name="start"
               type="date"
@@ -44,8 +47,11 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
             />
           </div>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>END</span>
+            <label for="end" className={styles.span}>
+              END
+            </label>
             <input
+              id="end"
               className={styles.input}
               name="end"
               type="date"
@@ -54,8 +60,11 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
             />
           </div>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>TODO</span>
+            <label for="text" className={styles.span}>
+              TODO
+            </label>
             <textarea
+              id="text"
               className={`${styles.input} ${styles.text} ${styles.todo}`}
               name="text"
               value={text}

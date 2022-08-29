@@ -42,16 +42,28 @@ const TodoAddForm = ({ setNewTodo, addTodo, isDark }) => {
         <CloseButton onClick={onClickCloseBtn} />
         <form ref={formRef} className={styles.form} onSubmit={onSubmit}>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>START</span>
-            <input ref={startRef} className={styles.input} type="date" />
+            <label for="start" className={styles.span}>
+              START
+            </label>
+            <input
+              id="start"
+              ref={startRef}
+              className={styles.input}
+              type="date"
+            />
           </div>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>END</span>
-            <input ref={endRef} className={styles.input} type="date" />
+            <label for="end" className={styles.span}>
+              END
+            </label>
+            <input id="end" ref={endRef} className={styles.input} type="date" />
           </div>
           <div className={styles.inputWrapper}>
-            <span className={styles.span}>TEXT</span>
+            <label for="text" className={styles.span}>
+              TEXT
+            </label>
             <textarea
+              id="text"
               ref={textRef}
               className={`${styles.input} ${styles.todo}`}
               placeholder="text"
