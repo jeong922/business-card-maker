@@ -60,13 +60,13 @@ const TodoAddForm = ({ setNewTodo, addTodo, isDark }) => {
           </div>
           <div className={styles.inputWrapper}>
             <label for="text" className={styles.span}>
-              TEXT
+              MEMO
             </label>
             <textarea
               id="text"
               ref={textRef}
               className={`${styles.input} ${styles.todo}`}
-              placeholder="text"
+              placeholder="memo"
             />
           </div>
           <Button name="Add" onClick={onSubmit} />

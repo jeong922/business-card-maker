@@ -61,14 +61,14 @@ const TodoEditForm = ({ todo, updateTodo, setEditTodo, isDark }) => {
           </div>
           <div className={styles.inputWrapper}>
             <label for="text" className={styles.span}>
-              TODO
+              MEMO
             </label>
             <textarea
               id="text"
               className={`${styles.input} ${styles.text} ${styles.todo}`}
               name="text"
               value={text}
-              placeholder="todo"
+              placeholder="memo"
               onChange={onChange}
             />
           </div>
